@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "extensions": [
+    {
+      "id": "example.hello-panel",
+      "publisher": "Nominy",
+      "repository": {
+        "owner": "Nominy",
+        "name": "exaudio-example-hello-panel"
+      },
+      "keywords": [
+        "example",
+        "hello",
+        "panel",
+        "greeting",
+        "sdk"
+      ],
+      "releases": [
+        {
+          "version": "0.1.0",
+          "tag": "v0.1.0",
+          "source_commit": "e45910b101ecd4a7e760d9de7ccf29bd066e67fe",
+          "manifest": {
+            "id": "example.hello-panel",
+            "name": "Hello panel",
+            "version": "0.1.0",
+            "api": "^0.1.0",
+            "runtime": "wasm",
+            "description": "Example extension: inserts a greeting.",
+            "license": "MIT",
+            "dependencies": {},
+            "permissions": [
+              {
+                "kind": "document-read"
+              },
+              {
+                "kind": "document-edit"
+              },
+              {
+                "kind": "secrets"
+              }
+            ],
+            "modes": [
+              {
+                "id": "example.hello.notes",
+                "name": "Hello notes",
+                "requires": {},
+                "recommends": {},
+                "provider": "example.hello.account",
+                "launch": "direct"
+              }
+            ],
+            "providers": [
+              {
+                "id": "example.hello.account",
+                "name": "Hello account",
+                "multiple": false
+              }
+            ]
+          },
+          "asset": {
+            "name": "example.hello-panel-0.1.0.exaudio",
+            "url": "https://github.com/Nominy/exaudio-example-hello-panel/releases/download/v0.1.0/example.hello-panel-0.1.0.exaudio",
+            "bytes": 26131,
+            "sha256": "fa653acccdbb5809142cee1dccdd851e3730a8b4e4ab98529ac7cab92891a561"
+          },
+          "withdrawn": null
+        }
+      ]
+    }
+  ]
+}

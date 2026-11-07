@@ -65,6 +65,85 @@
             "sha256": "fa653acccdbb5809142cee1dccdd851e3730a8b4e4ab98529ac7cab92891a561"
           },
           "withdrawn": null
+        },
+        {
+          "version": "0.2.0",
+          "tag": "v0.2.0",
+          "source_commit": "95e1b6d899ce431cfbbaf88b6b70b970eccff48a",
+          "manifest": {
+            "id": "example.hello-panel",
+            "name": "Hello panel",
+            "version": "0.2.0",
+            "api": "^0.2.0",
+            "runtime": "wasm",
+            "description": "Example extension: inserts a greeting.",
+            "license": "MIT",
+            "dependencies": {},
+            "permissions": [
+              {
+                "kind": "document-read"
+              },
+              {
+                "kind": "document-edit"
+              },
+              {
+                "kind": "secrets"
+              }
+            ],
+            "modes": [
+              {
+                "id": "example.hello.notes",
+                "name": "Hello notes",
+                "requires": {},
+                "recommends": {},
+                "provider": "example.hello.account",
+                "launch": "direct"
+              }
+            ],
+            "providers": [
+              {
+                "id": "example.hello.account",
+                "name": "Hello account",
+                "multiple": false
+              }
+            ],
+            "contributes": {
+              "actions": [
+                {
+                  "id": "example.hello-panel.greet",
+                  "title": {
+                    "en": "Insert greeting",
+                    "ru": "Вставить приветствие"
+                  },
+                  "category": null,
+                  "when": "editorOpen",
+                  "palette": true,
+                  "keys": [
+                    {
+                      "key": "ctrl-alt-g",
+                      "when": null,
+                      "mac": null
+                    }
+                  ],
+                  "menus": [
+                    {
+                      "menu": "editor/overflow",
+                      "group": "example",
+                      "order": 0,
+                      "when": null
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "asset": {
+            "name": "example.hello-panel-0.2.0.exaudio",
+            "url": "https://github.com/Nominy/exaudio-example-hello-panel/releases/download/v0.2.0/example.hello-panel-0.2.0.exaudio",
+            "bytes": 52459,
+            "sha256": "4577c90c6dd99813a10226bf53b7298dce886b0a68d9f11436c316777cd475ac"
+          },
+          "withdrawn": null
         }
       ]
     }
